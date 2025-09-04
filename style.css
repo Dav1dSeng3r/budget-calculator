@@ -1,0 +1,546 @@
+/*-- mobile.de UI Refresh - August 2025 --*/
+/* This file has been updated with the official brand colors. */
+
+:root {
+    /* Color Palette based on official brand guidelines */
+    --brand-purple: #4F166E; /* The primary brand color for headings */
+    --brand-orange: #DB3000; /* The primary call-to-action color */
+    --text-primary: #1A1A1A; /* For standard text */
+    --text-secondary: #4A4A4A; /* For body copy and secondary info */
+    --background-light: #FFFFFF; /* Main background color */
+    --background-grey: #F5F5F5; /* For sections and cards */
+    --border-color: #E0E0E0; /* Light borders for separation */
+
+    /* Typography based on mobile.de */
+    --font-family: 'Make It Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-secondary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Header --- */
+header {
+    background-color: var(--background-light);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    color: var(--brand-purple); /* Official Purple */
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+header nav a {
+    margin-left: 24px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* --- Main Content & SRP --- */
+main {
+    padding: 40px 0;
+}
+
+.srp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.srp-header h2 {
+    color: var(--brand-purple); /* Official Purple */
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.car-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.car-card {
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary); /* Keep listing titles neutral for readability */
+}
+
+.price {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.monthly-payment {
+    font-size: 1.1rem; /* Decreased from 1.4rem */
+    font-weight: 600; /* Decreased from 700 */
+    color: var(--brand-orange);
+    margin-top: 8px;
+}
+
+/* --- Home Page Specific Styles --- */
+.hero-section {
+    background: var(--background-grey);
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+}
+
+.hero-section h2 {
+    margin: 0;
+    font-size: 2.8rem;
+    color: var(--brand-purple); /* Official Purple */
+    font-weight: 800;
+}
+
+.teaser-section {
+    text-align: center;
+    background: var(--background-light);
+    padding: 50px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+}
+
+.teaser-section h3 {
+    margin-top: 0;
+    font-size: 2rem;
+    color: var(--brand-purple); /* Official Purple */
+    font-weight: 700;
+}
+
+/* --- VIP Page --- */
+.vip-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    background: var(--background-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.vip-gallery img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.vip-details h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--brand-purple); /* Official Purple */
+}
+
+.financing-summary {
+    background: var(--background-grey);
+    padding: 24px;
+    border-radius: 12px;
+    margin: 24px 0;
+}
+
+.finance-details-breakdown {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.finance-details-breakdown p {
+    margin: 8px 0;
+}
+
+.vip-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: 2px solid transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: var(--brand-orange); /* Official Orange */
+    color: var(--background-light);
+}
+
+.btn-primary:hover {
+    background-color: #C22A00; /* Darker shade of official orange */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(219, 48, 0, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--background-light);
+    color: var(--brand-orange); /* Official Orange */
+    border-color: var(--brand-orange);
+}
+
+.btn-secondary:hover {
+    background-color: #FFF2EE; /* Lighter shade for orange hover */
+    transform: translateY(-2px);
+}
+
+/* --- Modal --- */
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 26, 26, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--background-light);
+    padding: 35px;
+    border-radius: 16px;
+    width: 450px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.modal-content h2 {
+    color: var(--brand-purple); /* Official Purple */
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    font-weight: 300;
+    color: #999;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.close-btn:hover {
+    color: var(--text-primary);
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 3px rgba(219, 48, 0, 0.2);
+}
+
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 40px;
+    color: #888;
+    font-size: 0.9rem;
+    background-color: var(--background-grey);
+}
+
+/* --- SRP Teaser in Grid --- */
+.srp-teaser {
+    grid-column: 1 / -1; /* This makes the teaser span the full width of the grid */
+    background-color: var(--background-grey);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.srp-teaser h3 {
+    color: var(--brand-purple);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.srp-teaser p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    max-width: 400px;
+}
+
+.srp-teaser .btn-primary {
+    width: auto; /* Overrides the full-width button style for this specific button */
+    padding: 15px 35px; /* Custom padding */
+}
+/* --- Hero Section Button --- */
+.hero-actions {
+    margin-top: 30px;
+}
+
+.hero-actions .btn-primary {
+    width: auto; /* Prevent button from being full-width */
+    padding: 15px 40px;
+}
+/* --- Dual-Function Calculator Styles --- */
+.or-separator {
+    text-align: center;
+    margin: 25px 0;
+    font-weight: 600;
+    color: var(--border-color);
+    position: relative;
+}
+
+.or-separator span {
+    background-color: var(--background-light);
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.or-separator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+.suggested-price-area {
+    margin-top: 15px;
+}
+
+#suggested-price-output {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--brand-purple);
+    background-color: var(--background-grey);
+    padding: 15px 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* --- Vehicle Type Section --- */
+.vehicle-type-section {
+    padding: 40px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--brand-purple);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.type-card {
+    position: relative;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 200px;
+}
+
+.type-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.type-card:hover img {
+    transform: scale(1.1);
+}
+
+.type-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 50%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+.type-card:hover .type-card-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.1) 60%);
+}
+
+.type-card h3 {
+    color: var(--background-light);
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+/* --- Hero Section Search Form --- */
+.hero-search-form {
+    display: flex;
+    gap: 12px;
+    max-width: 800px;
+    margin: 30px auto 15px auto;
+}
+
+.search-input {
+    flex-grow: 1; /* Allows inputs to take up available space */
+    border: 1px solid var(--border-color);
+    font-size: 1rem;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: var(--font-family);
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--brand-orange);
+    box-shadow: 0 0 0 3px rgba(219, 48, 0, 0.2);
+}
+
+.hero-search-form .btn-primary {
+    width: auto; /* Override full-width button style */
+    flex-shrink: 0; /* Prevents button from shrinking */
+}
+
+.show-all-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--text-secondary);
+    text-decoration: underline;
+    font-weight: 600;
+}
+#srp-notification {
+    background-color: #FFF4EC;
+    border: 1px solid var(--brand-orange);
+    color: var(--text-primary);
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+/* --- Hero Section Background Image --- */
+.hero-section {
+    position: relative; /* Needed for the overlay effect */
+    background: 
+        /* Semi-transparent dark overlay */
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        /* Your background image */
+        url('https://static.classistatic.de/consumer-webapp/static/redesign-img.a03ae25ccc1b3cae9262..png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Change text color to white for readability */
+.hero-section h2,
+.hero-section p {
+    color: var(--background-light);
+}
+.monthly-payment.initial-state {
+    color: #888; /* Lighter grey color for the placeholder text */
+    font-weight: 400; /* Regular font weight */
+    font-size: 0.9rem; /* Slightly smaller */
+}
+/* --- VIP Mode for Budget Calculator --- */
+/* Hides the price calculator section when the modal is opened from the VIP */
+.modal.vip-mode .calculator-section,
+.modal.vip-mode .or-separator {
+    display: none;
+}

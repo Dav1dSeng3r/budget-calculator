@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - mobile.de Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>mobile.de</h1>
+            <nav>
+                <a href="#">Buy</a>
+                <a href="#">Sell</a>
+                <a href="#">Magazine</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="srp-header">
+                <h2>Search Results: <span>Used Cars</span></h2>
+            </div>
+            <div id="srp-notification" style="display:none;"></div>
+
+            <div class="car-listings">
+                <div class="car-card" data-price="12500" data-car-name="Dacia Sandero" data-car-img="https://placehold.co/300x200/E0E0E0/4F166E?text=Dacia+Sandero">
+                    <a href="vip.html?car=dacia" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/8f/8fbc3242-7aca-4170-9fc9-7c4086f73d4b?rule=mo-1600" alt="Dacia Sandero"><div class="card-body"><h3>Dacia Sandero</h3><p class="price">€12,500</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="14000" data-car-name="Fiat 500" data-car-img="https://via.placeholder.com/300x200.png?text=Fiat+500">
+                    <a href="vip.html?car=fiat-500" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/dd/ddbdd1a6-23c9-44d6-8368-f00294aa8cf7?rule=mo-1600" alt="Fiat 500"><div class="card-body"><h3>Fiat 500</h3><p class="price">€14,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="16500" data-car-name="Opel Corsa" data-car-img="https://via.placeholder.com/300x200.png?text=Opel+Corsa">
+                    <a href="vip.html?car=opel-corsa" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/a2/a2b59267-823a-4280-930b-9e7816a73855?rule=mo-1600" alt="Opel Corsa"><div class="card-body"><h3>Opel Corsa</h3><p class="price">€16,500</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="18000" data-car-name="Renault Clio" data-car-img="https://placehold.co/300x200/E0E0E0/4F166E?text=Renault+Clio">
+                    <a href="vip.html?car=renault" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/25/25d892f5-76d1-48f0-9b66-06def2d2d29d?rule=mo-1600" alt="Renault Clio"><div class="card-body"><h3>Renault Clio</h3><p class="price">€18,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="srp-teaser">
+                    <h3>Find Your Vehicle Faster and Within Budget</h3>
+                    <p>Enter your information and we'll show you vehicles that fit your budget.</p>
+                    <button id="open-calculator-btn" class="btn-primary">Calculate Your Budget</button>
+                </div>
+                <div class="car-card" data-price="19000" data-car-name="Toyota Yaris" data-car-img="https://placehold.co/300x200/E0E0E0/4F166E?text=Toyota+Yaris">
+                    <a href="vip.html?car=yaris" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/ac/acd058e0-0315-4051-b251-eaabf26be65f?rule=mo-1600" alt="Toyota Yaris"><div class="card-body"><h3>Toyota Yaris</h3><p class="price">€19,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="21000" data-car-name="Ford Focus" data-car-img="https://via.placeholder.com/300x200.png?text=Ford+Focus">
+                    <a href="vip.html?car=ford-focus" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/69/69976154-515e-416e-8edb-22d88effc90b?rule=mo-1600" alt="Ford Focus"><div class="card-body"><h3>Ford Focus</h3><p class="price">€21,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="28000" data-car-name="Volkswagen Golf" data-car-img="images/golf.jpg">
+                    <a href="vip.html?car=golf" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/c6/c6d8ae1d-3f33-4652-805e-10c652205dc5?rule=mo-1600" alt="Volkswagen Golf"><div class="card-body"><h3>Volkswagen Golf</h3><p class="price">€28,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="29000" data-car-name="Skoda Octavia" data-car-img="https://placehold.co/300x200/E0E0E0/4F166E?text=Skoda+Octavia">
+                    <a href="vip.html?car=skoda" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/e2/e213da6e-ada9-4d1c-82fc-bc5f817a44e3?rule=mo-1600" alt="Skoda Octavia"><div class="card-body"><h3>Skoda Octavia</h3><p class="price">€29,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="35000" data-car-name="Audi A4" data-car-img="https://via.placeholder.com/300x200.png?text=Audi+A4">
+                    <a href="vip.html?car=audi-a4" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/d8/d8658896-6d13-4bbd-a39d-ea5436830dc0?rule=mo-1600" alt="Audi A4"><div class="card-body"><h3>Audi A4</h3><p class="price">€35,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="42000" data-car-name="Volvo XC40" data-car-img="https://placehold.co/300x200/E0E0E0/4F166E?text=Volvo+XC40">
+                    <a href="vip.html?car=volvo" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/9e/9e0d3168-33a0-40e7-9fca-45a597f001d1?rule=mo-1600" alt="Volvo XC40"><div class="card-body"><h3>Volvo XC40</h3><p class="price">€42,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="45000" data-car-name="BMW 3 Series" data-car-img="images/bmw.jpg">
+                    <a href="vip.html?car=bmw" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/15/1519910f-3473-41ec-91cf-ca8da750fe9e?rule=mo-1600" alt="BMW 3 Series"><div class="card-body"><h3>BMW 3 Series</h3><p class="price">€45,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="49000" data-car-name="Tesla Model 3" data-car-img="https://via.placeholder.com/300x200.png?text=Tesla+Model+3">
+                    <a href="vip.html?car=tesla-model-3" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/cf/cf3cf32b-9c5b-4d99-a841-31e1ffe208ac?rule=mo-1600" alt="Tesla Model 3"><div class="card-body"><h3>Tesla Model 3</h3><p class="price">€49,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="31900" data-car-name="Tesla Model 3" data-car-img="https://via.placeholder.com/300x200.png?text=Tesla+Model+3">
+                    <a href="vip.html?car=tesla-model-3" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/19/1923a4d3-3b19-4356-9cde-16ca1d7b0a37?rule=mo-1600" alt="Tesla Model 3"><div class="card-body"><h3>Tesla Model 3</h3><p class="price">€31,900</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="18990" data-car-name="Fiat 500" data-car-img="https://via.placeholder.com/300x200.png?text=Fiat+500">
+                    <a href="vip.html?car=fiat-500" class="card-link">
+                        <img src="https://img.classistatic.de/api/v1/mo-prod/images/4a/4a1b01a6-88c7-4bce-92c5-1dbdf97bafcb?rule=mo-1600" alt="Fiat 500">
+                        <div class="card-body">
+                            <h3>Fiat 500</h3>
+                            <p class="price">€18,990</p>
+                            <p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="car-card" data-price="52000" data-car-name="Mercedes C-Class" data-car-img="images/mercedes.jpg">
+                    <a href="vip.html?car=mercedes" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/9b/9b2970d6-d938-428a-a0eb-9d8799575b94?rule=mo-1600" alt="Mercedes C-Class"><div class="card-body"><h3>Mercedes C-Class</h3><p class="price">€52,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="115000" data-car-name="Porsche 911" data-car-img="https://via.placeholder.com/300x200.png?text=Porsche+911">
+                    <a href="vip.html?car=porsche-911" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/e6/e64032e2-20d1-4fc1-86f4-ba5f145760c0?rule=mo-1600" alt="Porsche 911"><div class="card-body"><h3>Porsche 911</h3><p class="price">€115,000</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="43500" data-car-name="Volvo CX60" data-car-img="https://via.placeholder.com/300x200.png?text=Volvo+CX60">
+                    <a href="vip.html?car=volvo-cx60" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/07/071026c0-825c-48a3-8272-ce5d13a80d33?rule=mo-1600" alt="Volvo CX60"><div class="card-body"><h3>Volvo CX60</h3><p class="price">€43,500</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+                <div class="car-card" data-price="81990" data-car-name="Audi A6" data-car-img="https://via.placeholder.com/300x200.png?text=Audi+A6">
+                    <a href="vip.html?car=audi-a6" class="card-link"><img src="https://img.classistatic.de/api/v1/mo-prod/images/67/67446c5a-1a04-42d8-abe3-8821d8d3f1fc?rule=mo-1600" alt="Audi A6"><div class="card-body"><h3>Audi A6</h3><p class="price">€81,990</p><p class="monthly-payment initial-state">€--/mo · unable to calculate payments</p></div></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="budget-calculator-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Budget Calculator</h2>
+            
+            <div class="calculator-section">
+                <p>Tell us what you want to pay per month to find out your shopping budget.</p>
+                <div class="form-group">
+                    <label for="monthly-payment">Desired Monthly Payment (€)</label>
+                    <input type="number" id="monthly-payment" placeholder="e.g., 400" step="10">
+                </div>
+                <div class="suggested-price-area">
+                    <label>Suggested Vehicle Price</label>
+                    <div id="suggested-price-output">€0</div>
+                </div>
+            </div>
+
+            <div class="or-separator"><span>OR</span></div>
+
+            <form id="budget-form">
+                <p>Enter your details below to see personalized monthly payments on all car listings.</p>
+                <div class="form-group">
+                    <label for="down-payment">Down Payment (€)</label>
+                    <input type="number" id="down-payment" value="5000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="trade-in">Est. Trade-in Value (€)</label>
+                    <input type="number" id="trade-in" value="2000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="loan-term">Loan Term (months)</label>
+                    <select id="loan-term">
+                        <option value="24">24 months</option>
+                        <option value="36">36 months</option>
+                        <option value="48" selected>48 months</option>
+                        <option value="60">60 months</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interest-rate">Interest Rate (%)</label>
+                    <select id="interest-rate">
+                        <option value="3.99">3.99% (Average)</option>
+                        <option value="4.99" selected>4.99% (Good Credit)</option>
+                        <option value="5.99">5.99% (Fair Credit)</option>
+                    </select>
+                </div>
+                <button type="submit" id="form-submit-btn" class="btn-primary">Apply Budget & View Cars</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mobile.de GmbH</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

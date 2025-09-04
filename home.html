@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile.de - Germany's Largest Vehicle Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="home-page">
+
+    <header>
+        <div class="container">
+            <h1>mobile.de</h1>
+            <nav>
+                <a href="#">Buy</a>
+                <a href="#">Sell</a>
+                <a href="#">Magazine</a>
+            </nav>
+        </div>
+    </header>
+
+<main>
+        <div class="container">
+
+            <div class="hero-section">
+                <h2>Find your next car</h2>
+                <p>Germany's largest vehicle marketplace.</p>
+                <div class="hero-search-form">
+                    <input type="text" class="search-input" placeholder="Enter Make (e.g., BMW)">
+                    <input type="text" class="search-input" placeholder="Enter Model (e.g., 3 Series)">
+                    <a href="index.html" class="btn-primary">Search 23,458 cars</a>
+                </div>
+            </div>
+
+            <div class="teaser-section">
+                <h3>Shop by budget</h3>
+                <p>Estimate your buying power and see personalised financing on thousand of cars.</p>
+                <button id="open-calculator-btn" class="btn-primary">Find cars by budget</button>
+            </div>
+
+            <section class="vehicle-type-section">
+                <h2 class="section-title">Browse by vehicle type</h2>
+                <div class="type-grid">
+                    <a href="index.html" class="type-card">
+                        <img src="https://www.autotrader.com/content/dam/autotrader/homepage/styles/new_default_desk_style_wagon.png" alt="Stationwagon">
+                        <div class="type-card-overlay">
+                            <h3>Stationwagon</h3>
+                        </div>
+                    </a>
+                    <a href="index.html" class="type-card">
+                        <img src="https://www.autotrader.com/content/dam/autotrader/homepage/styles/new_default_desk_style_sedan.png" alt="Sedan">
+                        <div class="type-card-overlay">
+                            <h3>Sedan</h3>
+                        </div>
+                    </a>
+                    <a href="index.html" class="type-card">
+                        <img src="https://www.autotrader.com/content/dam/autotrader/homepage/styles/new_default_desk_style_convertible.png" alt="Convertible">
+                        <div class="type-card-overlay">
+                            <h3>Convertible</h3>
+                        </div>
+                    </a>
+                    <a href="index.html" class="type-card">
+                        <img src="https://www.autotrader.com/content/dam/autotrader/homepage/styles/new_default_desk_style_suv.png" alt="Offroad vehicle">
+                        <div class="type-card-overlay">
+                            <h3>Offroad</h3>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+        </div>
+    </main>
+
+ <div id="budget-calculator-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Budget Calculator</h2>
+            
+            <div class="calculator-section">
+                <p>Tell us what you want to pay per month to find out your shopping budget.</p>
+                <div class="form-group">
+                    <label for="monthly-payment">Desired Monthly Payment (€)</label>
+                    <input type="number" id="monthly-payment" placeholder="e.g., 400" step="10">
+                </div>
+                <div class="suggested-price-area">
+                    <label>Suggested Vehicle Price</label>
+                    <div id="suggested-price-output">€0</div>
+                </div>
+            </div>
+
+            <div class="or-separator"><span>OR</span></div>
+
+            <form id="budget-form">
+                <p>Enter your details below to see personalized monthly payments on all car listings.</p>
+                <div class="form-group">
+                    <label for="down-payment">Down Payment (€)</label>
+                    <input type="number" id="down-payment" value="5000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="trade-in">Est. Trade-in Value (€)</label>
+                    <input type="number" id="trade-in" value="2000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="loan-term">Loan Term (months)</label>
+                    <select id="loan-term">
+                        <option value="24">24 months</option>
+                        <option value="36">36 months</option>
+                        <option value="48" selected>48 months</option>
+                        <option value="60">60 months</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interest-rate">Interest Rate (%)</label>
+                    <select id="interest-rate">
+                        <option value="3.99">3.99% (Average)</option>
+                        <option value="4.99" selected>4.99% (Good Credit)</option>
+                        <option value="5.99">5.99% (Fair Credit)</option>
+                    </select>
+                </div>
+                <button type="submit" id="form-submit-btn" class="btn-primary">Apply Budget & View Cars</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mobile.de GmbH</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

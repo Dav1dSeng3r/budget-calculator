@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Info Page - mobile.de Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>mobile.de</h1>
+            <nav>
+                <a href="index.html">Back to Search</a>
+                <a href="#">Sell</a>
+                <a href="#">Magazine</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="vip-content">
+                <div class="vip-gallery">
+                    <img id="vip-car-img" src="https://via.placeholder.com/600x400.png?text=Car" alt="Main Car Image">
+                </div>
+                <div class="vip-details">
+                    <h2 id="vip-car-name">Car Name</h2>
+                    <p class="price" id="vip-car-price">€0</p>
+                    
+                    <div class="financing-summary">
+                        <h3>Your Personalized Offer</h3>
+			<p class="monthly-payment initial-state" id="vip-monthly-payment">€--/mo · unable to calculate a payments</p>                        			<div class="finance-details-breakdown" id="finance-breakdown" style="display:none;">
+                            <p><strong>Down Payment:</strong> <span id="summary-down-payment"></span></p>
+                            <p><strong>Trade-in Value:</strong> <span id="summary-trade-in"></span></p>
+                            <p><strong>Loan Term:</strong> <span id="summary-term"></span></p>
+                            <p><strong>Interest Rate:</strong> <span id="summary-rate"></span></p>
+                            <small>Terms are estimates only and subject to credit check.</small>
+                        </div>
+                        <p id="vip-prompt" style="display:block;">Adjust your budget to see a monthly payment.</p>
+                    </div>
+
+                    <div class="vip-actions">
+                         <button id="open-calculator-btn" class="btn-secondary">Adjust Budget</button>
+                        <button id="request-financing-btn" class="btn-primary">Request Financing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+ <div id="budget-calculator-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Budget Calculator</h2>
+            
+            <div class="calculator-section">
+                <p>Tell us what you want to pay per month to find out your shopping budget.</p>
+                <div class="form-group">
+                    <label for="monthly-payment">Desired Monthly Payment (€)</label>
+                    <input type="number" id="monthly-payment" placeholder="e.g., 400" step="10">
+                </div>
+                <div class="suggested-price-area">
+                    <label>Suggested Vehicle Price</label>
+                    <div id="suggested-price-output">€0</div>
+                </div>
+            </div>
+
+            <div class="or-separator"><span>OR</span></div>
+
+            <form id="budget-form">
+                <p>Enter your details below to see personalized monthly payments on all car listings.</p>
+                <div class="form-group">
+                    <label for="down-payment">Down Payment (€)</label>
+                    <input type="number" id="down-payment" value="5000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="trade-in">Est. Trade-in Value (€)</label>
+                    <input type="number" id="trade-in" value="2000" step="100">
+                </div>
+                <div class="form-group">
+                    <label for="loan-term">Loan Term (months)</label>
+                    <select id="loan-term">
+                        <option value="24">24 months</option>
+                        <option value="36">36 months</option>
+                        <option value="48" selected>48 months</option>
+                        <option value="60">60 months</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="interest-rate">Interest Rate (%)</label>
+                    <select id="interest-rate">
+                        <option value="3.99">3.99% (Average)</option>
+                        <option value="4.99" selected>4.99% (Good Credit)</option>
+                        <option value="5.99">5.99% (Fair Credit)</option>
+                    </select>
+                </div>
+                <button type="submit" id="form-submit-btn" class="btn-primary">Apply Budget</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 mobile.de GmbH</p>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
